@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>arbor.js project template</title>
+	<link rel="stylesheet" href="styletest.css" type="text/css">
+</head>
+<body>
+  <canvas id="viewport" width="800" height="600"></canvas>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  
+  <script>
+	var c = document.getElementById("viewport");
+	var tmpCtx = c.getContext("2d");
+	var radius = 75;
+	var x =600;
+	var y = 250;
+	
+	var thumbImg = document.createElement('img');
+
+	thumbImg.src = 'https://pbs.twimg.com/profile_images/3078706395/a2efac74f78db1eb7fad33df3b88b02b.jpeg';
+	thumbImg.onload = function() {
+    tmpCtx.save();
+    tmpCtx.beginPath();
+    tmpCtx.arc(x + radius, y + radius, radius, 0, Math.PI * 2, true);
+    tmpCtx.closePath();
+    tmpCtx.clip();
+
+    tmpCtx.drawImage(thumbImg, x, y, radius * 2, radius * 2);
+
+    tmpCtx.beginPath();
+    tmpCtx.arc(0, 0, radius, 0, Math.PI * 2, true);
+    tmpCtx.clip();
+    tmpCtx.closePath();
+    tmpCtx.restore();
+};
+  </script>
+
+  <!-- run from the original source files: -->
+  <!-- <script src="../../src/etc.js"></script>
+       <script src="../../src/kernel.js"></script>
+       <script src="../../src/graphics/colors.js"></script>
+       <script src="../../src/graphics/primitives.js"></script>
+       <script src="../../src/graphics/graphics.js"></script>
+       <script src="../../src/tween/easing.js"></script>
+       <script src="../../src/tween/tween.js"></script>
+       <script src="../../src/physics/atoms.js"></script>
+       <script src="../../src/physics/physics.js"></script>
+       <script src="../../src/physics/system.js"></script>
+       <script src="../../src/dev.js"></script> -->
+
+  <!-- run from the minified library file: -->
+  <script src="arbor.js"></script>  
+
+  <!--script src="maintest.js"></script-->
+
+</body>
+</html>
