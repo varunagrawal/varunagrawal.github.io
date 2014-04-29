@@ -2,59 +2,28 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>arbor.js project template</title>
-	<link rel="stylesheet" href="styletest.css" type="text/css">
-</head>
-<body>
-  <canvas id="viewport" width="800" height="600"></canvas>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  
-  <script>
-	var c = document.getElementById("viewport");
-	var tmpCtx = c.getContext("2d");
-	var radius = 75;
-	var x =600;
-	var y = 250;
-	
-	var thumbImg = document.createElement('img');
-	thumbImg.src = "http://www.gravatar.com/avatar/cc856652c4db97f4eacc9bffa6540ece?s=200";
-	thumbImg.onload = function() {
-    tmpCtx.save();
-    tmpCtx.beginPath();
-    tmpCtx.arc(x + radius, y + radius, radius, 0, Math.PI * 2, true);
-    tmpCtx.closePath();
-    tmpCtx.clip();
+  <head>
 
-    tmpCtx.drawImage(thumbImg, x, y, radius * 2, radius * 2);
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>arbor.js project template</title>
+    <!--link rel="stylesheet" href="styletest.css" type="text/css"-->
+    
+    <!--script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script-->
+    <script type="text/javascript" src="javascript/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="javascript/site.js"></script>
+    <!-- run from the minified library file: -->
+    <script src="javascript/arbor.js"></script>  
 
-    tmpCtx.beginPath();
-    tmpCtx.arc(0, 0, radius, 0, Math.PI * 2, true);
-    tmpCtx.clip();
-    tmpCtx.closePath();
-    tmpCtx.restore();
-};
-  </script>
+  </head>
 
-  <!-- run from the original source files: -->
-  <!-- <script src="../../src/etc.js"></script>
-       <script src="../../src/kernel.js"></script>
-       <script src="../../src/graphics/colors.js"></script>
-       <script src="../../src/graphics/primitives.js"></script>
-       <script src="../../src/graphics/graphics.js"></script>
-       <script src="../../src/tween/easing.js"></script>
-       <script src="../../src/tween/tween.js"></script>
-       <script src="../../src/physics/atoms.js"></script>
-       <script src="../../src/physics/physics.js"></script>
-       <script src="../../src/physics/system.js"></script>
-       <script src="../../src/dev.js"></script> -->
+  <body>
+    <img src="http://www.gravatar.com/avatar/cc856652c4db97f4eacc9bffa6540ece?s=200" style="display:none" />
+    <canvas id="viewport" height="600" width="800"></canvas> 
+    
+    
+    <div id="sample"></div>
 
-  <!-- run from the minified library file: -->
-  <script src="arbor.js"></script>  
+  </body>
 
-  <!--script src="maintest.js"></script-->
-
-</body>
 </html>
