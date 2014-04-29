@@ -25,6 +25,8 @@ $(function(){
     
     var selfImg = $("<img></img>")[0];
     selfImg.src = "http://www.gravatar.com/avatar/cc856652c4db97f4eacc9bffa6540ece?s=200";
-    selfImg.onload = renderCircle(ctx, x, y, radius, selfImg);
+    selfImg.onload = function(){
+	renderCircle(ctx, x, y, radius, selfImg);
+    };
 
 });
