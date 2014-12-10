@@ -15,8 +15,10 @@
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
+    
+    <!--link href="stylesheets/stylesheet.css" rel="stylesheet"-->
 	
-	<link rel="stylesheet" href="/octicons/octicons.css">
+	<link rel="stylesheet" href="octicons/octicons.css">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -31,14 +33,53 @@
 
   <body>
 
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Varun Agrawal</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!--<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>-->
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+    
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
 
-          <div class="masthead clearfix">
-            <div class="inner">
+            <!--<div class="inner">
               <h3 class="masthead-brand">Cover</h3>
               <nav>
                 <ul class="nav masthead-nav">
@@ -48,7 +89,7 @@
                 </ul>
               </nav>
             </div>
-          </div>
+          </div>-->
 
           <div class="inner cover">
             <h1 class="cover-heading">Welcome to my page</h1>
@@ -57,13 +98,11 @@
               <a href="#" class="btn btn-lg btn-default">Learn more</a>
             </p>-->
           </div>
-
+          
           <div class="mastfoot">
             <div class="inner">
-				<a href="https://github.com">
-					<span class="octicon octicon-code"></span> with <span class="octicon octicon-credit-card"></span> by <span class="octicon octicon-logo-github"></span></a>
-              <!--<p>Made with for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
-			  </a>
+              <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> and <a href="http://getbootstrap.com">Bootstrap</a> by Varun.
+              <!--<p>Made with for , by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
             </div>
           </div>
 
@@ -73,6 +112,55 @@
 
     </div>
 
+    
+    
+    <div name="about" class="site-wrapper">
+        <a name="about"></a>
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+                <div class="inner">
+                  <h3 class="masthead-brand">Cover</h3>
+                </div>
+            </div>
+
+            <div class="inner cover">
+                <h1 class="cover-heading">About Me</h1>
+                <p class="lead">I am a developer based in India</p>
+            </div>
+          
+        </div>
+        
+    </div>
+    
+    
+    <div name="projects" class="site-wrapper">
+        <a name="projects"></a>
+        <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="inner">
+              <h3 class="masthead-brand">Projects</h3>
+            </div>
+        </div>
+
+        <div class="inner cover">
+            <h1 class="cover-heading">Projects</h1>
+            <p class="lead">You can find my project portfolio here</p>
+        </div>
+          
+          
+
+        </div>
+
+      </div>
+
+    </div>
+            
+          
+          
+          
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
