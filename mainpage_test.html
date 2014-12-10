@@ -1,61 +1,85 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>arbor.js project template</title>
-	<link rel="stylesheet" href="styletest.css" type="text/css">
-</head>
-<body>
-  <canvas id="viewport" width="800" height="600"></canvas>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  
-  <script>
-	var c = document.getElementById("viewport");
-	var tmpCtx = c.getContext("2d");
-	var radius = 75;
-	var x =600;
-	var y = 250;
+    <title>Varun Agrawal</title>
 	
-	var thumbImg = document.createElement('img');
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-	thumbImg.src = 'https://pbs.twimg.com/profile_images/3078706395/a2efac74f78db1eb7fad33df3b88b02b.jpeg';
-	thumbImg.onload = function() {
-    tmpCtx.save();
-    tmpCtx.beginPath();
-    tmpCtx.arc(x + radius, y + radius, radius, 0, Math.PI * 2, true);
-    tmpCtx.closePath();
-    tmpCtx.clip();
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="/octicons/octicons.css">
 
-    tmpCtx.drawImage(thumbImg, x, y, radius * 2, radius * 2);
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
-    tmpCtx.beginPath();
-    tmpCtx.arc(0, 0, radius, 0, Math.PI * 2, true);
-    tmpCtx.clip();
-    tmpCtx.closePath();
-    tmpCtx.restore();
-};
-  </script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-  <!-- run from the original source files: -->
-  <!-- <script src="../../src/etc.js"></script>
-       <script src="../../src/kernel.js"></script>
-       <script src="../../src/graphics/colors.js"></script>
-       <script src="../../src/graphics/primitives.js"></script>
-       <script src="../../src/graphics/graphics.js"></script>
-       <script src="../../src/tween/easing.js"></script>
-       <script src="../../src/tween/tween.js"></script>
-       <script src="../../src/physics/atoms.js"></script>
-       <script src="../../src/physics/physics.js"></script>
-       <script src="../../src/physics/system.js"></script>
-       <script src="../../src/dev.js"></script> -->
+  <body>
 
-  <!-- run from the minified library file: -->
-  <script src="arbor.js"></script>  
+    <div class="site-wrapper">
 
-  <!--script src="maintest.js"></script-->
+      <div class="site-wrapper-inner">
 
-</body>
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Cover</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Welcome to my page</h1>
+            <p class="lead">Hi there!</p>
+            <!--<p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>-->
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+				<a href="https://github.com">
+					<span class="octicon octicon-code"></span> with <span class="octicon octicon-credit-card"></span> by <span class="octicon octicon-logo-github"></span></a>
+              <!--<p>Made with for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
+			  </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
