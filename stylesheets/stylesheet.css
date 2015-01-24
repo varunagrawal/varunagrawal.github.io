@@ -246,7 +246,10 @@ a {
   zoom:1;
 }
 
-/* FROM THE cover.css  */
+
+/* FROM THE cover.css
+======================
+*/
 
 /*
 * Globals
@@ -277,7 +280,7 @@ a:hover {
 html,
 body {
     height: 100%;
-    background-color: #333;
+    /*background-color: #333;*/
 }
 body {
     color: #fff;
