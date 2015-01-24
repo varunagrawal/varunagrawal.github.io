@@ -1,3 +1,7 @@
+.index-cover {
+    margin-top: 10%;
+}
+
 .profile-image {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -17,4 +21,10 @@
     position: relative;
     margin-left: -5px;
     margin-top: -8px;
+}
+
+.greeting {
+    margin-top: 5%;
+    margin-left: 5%;
+    float: left;
 }
