@@ -29,3 +29,10 @@
     margin-left: 5%;
     float: left;
 }
+
+.special-h2 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+    max-width: 350px;
+}
