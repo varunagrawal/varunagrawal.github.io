@@ -412,7 +412,8 @@ body {
     .masthead,
     .mastfoot,
     .cover-container {
-        width: 700px;
+        width: 900px;
+        margin-top:4%;
     }
 }
 
