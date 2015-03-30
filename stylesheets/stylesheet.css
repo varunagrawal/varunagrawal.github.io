@@ -175,18 +175,21 @@ table {
 
   max-width: none;
   table-layout: fixed;
-  word-wrap: break-word;
 }
 
 th {
   text-align: left;
   border-bottom: 1px dashed #b5e853;
   padding: 5px 10px;
+
+  word-wrap: break-word;
 }
 
 td {
   text-align: left;
   padding: 5px 10px;
+
+  word-wrap: break-word;
 }
 
 hr {
