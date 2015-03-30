@@ -1,21 +1,20 @@
 .index-cover {
-    margin-top: 15%;
-    max-width: 900px;
+    margin-top: 10%;
+
 }
 
 .profile-image {
-    -webkit-box-sizing: border-box;
+    /*-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    float: left;
     width: 240px;
     height: 240px;
     border-radius: 100%;
     overflow: hidden;
     padding: 6px;
-    background: #fff;
-    z-index: 2;
-    box-shadow: #E7EEF2 0 0 0 1px;
+    background: #000;
+    box-shadow: #E7EEF2 0 0 0 1px;*/
+    margin-top: 5%;
 }
 
 #gravatar-img {
@@ -26,8 +25,8 @@
 
 .greeting {
     margin-top: 5%;
-    margin-left: 5%;
-    float: left;
+    /*margin-left: 5%;
+    float: left;*/
 }
 
 .special-h2 {
