@@ -172,9 +172,6 @@ pre {
 table {
   width: 100%;
   margin: 0 0 20px 0;
-
-  max-width: none;
-  table-layout: fixed;
 }
 
 th {
@@ -182,14 +179,14 @@ th {
   border-bottom: 1px dashed #b5e853;
   padding: 5px 10px;
 
-  word-wrap: break-word;
+  /*word-wrap: break-word;*/
 }
 
 td {
   text-align: left;
   padding: 5px 10px;
 
-  word-wrap: break-word;
+  /*word-wrap: break-word;*/
 }
 
 hr {
