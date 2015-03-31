@@ -36,6 +36,10 @@
     color: #666;
 }
 
+#twitter-widget-0 {
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .latest-work {
         margin-top: 15%;
@@ -44,6 +48,6 @@
 
 @media (min-width: 992px) {
     .latest-updates{
-        margin-top: 5%; 
+        margin-top: 5%;
     }
 }
