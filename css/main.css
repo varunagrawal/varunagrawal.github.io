@@ -36,8 +36,11 @@
     color: #666;
 }
 
-#twitter-widget-0 {
-    width: 100%;
+/*
+    Twitter Embedded Timeline CSS
+*/
+@media (max-width: 768px) {
+    .twitter-embed { width: 96%; }
 }
 
 @media (max-width: 768px) {
