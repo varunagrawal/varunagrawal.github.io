@@ -36,17 +36,14 @@
     color: #666;
 }
 
-/*
-    Twitter Embedded Timeline CSS
-*/
 @media (max-width: 768px) {
-    .twitter-embed { width: 96%; }
-}
-
-@media (max-width: 768px) {
+    .latest-updates{
+        margin-top: 5%;
+    }
     .latest-work {
         margin-bottom: 10%;
     }
+
 }
 
 @media (min-width: 992px) {
