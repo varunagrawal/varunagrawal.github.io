@@ -16,9 +16,9 @@
                     <ul class="nav navbar-nav">
                         {% for page in site.pages %}
                             {% if "/" + page.title.downcase + "/index.html" == page.url %}
-                                <li class="active"><a href="{{ page.url | prepend: site.baseurl }}">page.title</a></li>
+                                <li class="active"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
                             {% else %}
-                                <li ><a href="{{ page.url | prepend: site.baseurl }}">page.title</a></li>
+                                <li ><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
                             {% endif %}
                         {% endfor %}
                     </ul>
