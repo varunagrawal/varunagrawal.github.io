@@ -14,10 +14,13 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li {% if page.url == "/" %}class="active"{% endif %}><a href="/">Home</a></li>
-                        <li{% if page.url == "/about/" %}class="active"{% endif %}><a href="/about/">About</a></li>
-                        <li{% if page.url == "/projects/" %}class="active"{% endif %}><a href="/projects/">Projects</a></li>
-                        <li{% if page.url == "/contact/" %}class="active"{% endif %}><a href="/contact/">Contact</a></li>
+                        {% for page in site.pages %}
+                            {% if "/" + page.title.downcase + "/index.html" == page.url %}
+                                <li class="active"><a href="{{ page.url | prepend: site.baseurl }}">page.title</a></li>
+                            {% else %}
+                                <li ><a href="{{ page.url | prepend: site.baseurl }}">page.title</a></li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
