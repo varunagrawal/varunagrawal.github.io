@@ -11,7 +11,7 @@ twitter_username: varagrawal
 github_username:  varunagrawal
 
 name: Varun Agrawal
-highlighter: true
+pygments: true
 timezone: Asia/Kolkata
 lsi: true
 
