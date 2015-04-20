@@ -18,4 +18,3 @@ lsi: true
 # Build settings
 markdown: kramdown
 
-port: 80
