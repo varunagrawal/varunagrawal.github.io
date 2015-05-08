@@ -15,7 +15,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         {% for link in site.data.navbar %}
-                            <li {% if page.url.include? link.url %}class="active"{% endif %}><a href="{{ link.url }}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+                            <li {% if page.url == link.url %}class="active"{% endif %}><a href="{{ link.url }}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
