@@ -1,0 +1,23 @@
+- title: Home
+  url: /
+  external: false
+
+- title: About
+  url: /about/
+  external: false
+
+- title: Projects
+  url: /projects/
+  external: false
+
+- title: Contact
+  url: /contact/
+  external: false
+
+- title: Blog
+  url: https://computercalledvarun.wordpress.com/
+  external: true
+
+- title: Philosophy
+  url: https://varunagrawal.wordpress.com/
+  external: true
