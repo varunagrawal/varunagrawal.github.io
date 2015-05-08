@@ -14,12 +14,9 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li {% if page.title == site.title %}class="active"{% endif %}><a href="/">Home</a></li>
-                        <li {% if page.title == "About" %}class="active"{% endif %}><a href="/about/">About</a></li>
-                        <li {% if page.title == "Projects" %}class="active"{% endif %}><a href="/projects/">Projects</a></li>
-                        <li {% if page.title == "Contact" %}class="active"{% endif %}><a href="/contact/">Contact</a></li>
-                        <li><a href="https://computercalledvarun.wordpress.com/" target="_blank">Blog</a></li>
-                        <li><a href="https://varunagrawal.wordpress.com/" target="_blank">Philosophy</a></li>
+                        {% for link in site.data.navbar %}
+                            <li {% if page.url.include? link.url %}class="active"{% endif %}><a href="{{ link.url }}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
