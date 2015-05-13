@@ -13,11 +13,3 @@
 - title: Contact
   url: /contact/
   external: false
-
-- title: Blog
-  url: https://computercalledvarun.wordpress.com/
-  external: true
-
-- title: Philosophy
-  url: https://varunagrawal.wordpress.com/
-  external: true
