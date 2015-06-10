@@ -31,8 +31,9 @@
     font-weight: 300;
     color: #666;
 }
-.project {
-    background-size:100%; 
+.project:before {
+    background-size:100%;
+    opacity:0.6;
 }
 @media (max-width: 768px) {
     .latest-updates {
