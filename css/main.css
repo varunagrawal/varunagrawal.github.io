@@ -32,17 +32,16 @@
     color: #666;
 }
 .project:before {
-    /*background-size:100%;*/
     height: 20%;
     z-index: 1;
     opacity: 0.6;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
+    -ms-background-size: 100%;
+    -o-background-size: 100%;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    background-size: 100%;
 }
 @media (max-width: 768px) {
     .latest-updates {
