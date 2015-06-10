@@ -32,8 +32,8 @@
     color: #666;
 }
 .project {
-    height: 30px;
-    min-height: 25px;
+    /*height: 30px;
+    min-height: 25px;*/
 }
 
 @media (max-width: 768px) {
