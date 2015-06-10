@@ -31,6 +31,9 @@
     font-weight: 300;
     color: #666;
 }
+.project {
+    background-size:100%; 
+}
 @media (max-width: 768px) {
     .latest-updates {
         margin-top: 5%;
