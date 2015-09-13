@@ -114,6 +114,7 @@ dt {
 }
 ul li {
     list-style: none;
+    text-align: justify; /* body at line 250 causes poor alignment, hence justifying. This shifts whole ul to the left so place inside <div> */
 }
 ul li:before {
     /*content: ">>";*/
