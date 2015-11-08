@@ -12,8 +12,8 @@ twitter_username: varagrawal
 github_username:  varunagrawal
 
 name: Varun Agrawal
-pygments: true
-timezone: Asia/Kolkata
+highlighter: pygments
+timezone: EST
 lsi: true
 
 # Build settings
