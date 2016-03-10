@@ -9,12 +9,12 @@ twitter_username: varagrawal
 github_username:  varunagrawal
 
 name: Varun Agrawal
-highlighter: pygments
 timezone: EST
 lsi: true
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 
 permalink: pretty
 
