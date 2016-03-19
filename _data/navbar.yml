@@ -1,9 +1,13 @@
 - title: Home
-  url: /index.html
+  url: /
   external: false
 
 - title: About
   url: /about/
+  external: false
+
+- title: Publications
+  url: /publications/
   external: false
 
 - title: Projects
