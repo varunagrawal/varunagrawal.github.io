@@ -1,0 +1,29 @@
+{
+  "name": "varunagrawal.github.io",
+  "description": "Website of Varun Agrawal",
+  "main": "index.js",
+  "authors": [
+    "Varun Agrawal"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "website",
+    "online",
+    "personal"
+  ],
+  "homepage": "https://github.com/varunagrawal/varunagrawal.github.io",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "hover": "git@github.com:IanLunn/Hover.git#^2.0.2",
+    "masonry": "^4.0.0"
+  }
+}
