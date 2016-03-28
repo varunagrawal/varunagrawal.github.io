@@ -9,7 +9,7 @@ body {
     padding: 0;
     background: #151515 url("../images/bkg.png") 0 0;
     color: #eaeaea;
-    font: 16px;
+    font-size: 16px;
     line-height: 1.5;
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
@@ -249,7 +249,7 @@ html, body {
     /*background-color: #333;*/
 }
 body {
-    color: #fff;
+    color: #FFFFFF;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
@@ -410,33 +410,39 @@ body {
 }
 .inverse-dropdown:hover{
     color: #fff;
-    background-color: #000;
+    background-color: #111;
 }
 
 .inverse-dropdown > .divider {
-    background-color: #000;
+    background-color: #111;
 }
 
+/* Custom Navbar background color so that it contrasts better */
+.navbar-inverse {
+    /*background-color: #272727;*/
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
     /* Navbar positioning foo */
-
     .navbar-wrapper {
         margin-top: 20px;
     }
+
     .navbar-wrapper .container {
         padding-right: 15px;
         padding-left: 15px;
     }
+
     .navbar-wrapper .navbar {
         padding-right: 0;
         padding-left: 0;
     }
-    /* The navbar becomes detached from the top, so we round the corners */
 
+    /* The navbar becomes detached from the top, so we round the corners */
     .navbar-wrapper .navbar {
         border-radius: 4px;
     }
+}
