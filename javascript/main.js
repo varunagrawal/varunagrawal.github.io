@@ -1,16 +1,17 @@
 console.log('This would be the main JS file.');
 
 function getQuote(){
-    // Quote courtesy of Quotes On Design "http://quotesondesign.com/api-v4-0/"
+    // Quote courtesy of TheySaidSo.com "https://theysaidso.com/api/"
     console.log("Getting quote");
     $.ajax({
-        url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+        url: "http://quotes.rest/qod.json",
+        //url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
         success: function(data) {
             // Data is an array of size 1, so get the first one.
-            var quote = data.shift();
+            var quote = data.contents.quotes.shift();
 
             // add the quote to the webpage
-            $("#quote").html(quote.content + "\n - " + quote.title);
+            $("#quote").html(quote.quote + "\n - " + quote.author);
         },
         cache: false
     });

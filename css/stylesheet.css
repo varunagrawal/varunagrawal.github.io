@@ -9,7 +9,7 @@ body {
     padding: 0;
     background: #151515 url("../images/bkg.png") 0 0;
     color: #eaeaea;
-    font: 16px;
+    font-size: 16px;
     line-height: 1.5;
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
@@ -423,20 +423,22 @@ body {
 
 @media (min-width: 768px) {
     /* Navbar positioning foo */
-
     .navbar-wrapper {
         margin-top: 20px;
     }
+
     .navbar-wrapper .container {
         padding-right: 15px;
         padding-left: 15px;
     }
+
     .navbar-wrapper .navbar {
         padding-right: 0;
         padding-left: 0;
     }
-    /* The navbar becomes detached from the top, so we round the corners */
 
+    /* The navbar becomes detached from the top, so we round the corners */
     .navbar-wrapper .navbar {
         border-radius: 4px;
     }
+}
