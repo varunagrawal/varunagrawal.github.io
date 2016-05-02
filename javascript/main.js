@@ -1,6 +1,7 @@
 console.log('This would be the main JS file.');
 
 function getQuote(){
+    // Quote courtesy of Quotes On Design "http://quotesondesign.com/api-v4-0/"
     console.log("Getting quote");
     $.ajax({
         url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
