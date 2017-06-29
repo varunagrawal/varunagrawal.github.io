@@ -1,6 +1,6 @@
-- title: Home
-  url: /
-  external: false
+#- title: Home
+#  url: /
+#  external: false
 
 - title: About
   url: /about/
@@ -10,9 +10,9 @@
   url: /publications/
   external: false
 
-- title: Projects
-  url: /projects/
-  external: false
+# - title: Projects
+#  url: /projects/
+#  external: false
 
 - title: Contact
   url: /contact/
@@ -21,3 +21,7 @@
 - title: Resume
   url: /resume/
   external: false
+
+- title: Guides
+  url: /guides/
+  external: true
