@@ -1,0 +1,23 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+
+<div class="cover-container">
+
+    <div class="inner">
+        <h3 class="masthead-brand"></h3>
+    </div>
+
+    <div class="inner cover">
+        <h1 class="cover-heading">Blog</h1>
+        <br/>
+
+        <p>Currently under migration. Apologies for the wait.</p>
+        {% for post in site.posts %}
+        <a href="{{post.url}}">{{ post.title }}</a>
+        {% endfor %}
+    </div>
+
+</div>
