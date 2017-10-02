@@ -4,24 +4,19 @@ title: Research
 permalink: /research/
 ---
 
-<div class="cover-container">
-
-    <div class="inner">
-        <h3 class="masthead-brand"></h3>
+<div class="row">
+    <div class="col-10 ml-auto mr-auto">
+        <ul class="">
+            {% for paper in site.data.publications %}
+            <li>
+                <b>{{paper.title}}{% if paper.type %}, {{paper.type}}{% endif %}</b>
+                <br/>
+                {{paper.authors}}
+                <br/>
+                <i>{{paper.venue}}</i>
+            </li>
+            <br/>
+            {% endfor %}
+        </ul>
     </div>
-
-    <ul class="inner cover">
-        {% for paper in site.data.publications %}
-        <li>
-            <b>{{paper.title}}{% if paper.type %}, {{paper.type}}{% endif %}</b>
-            <br/>
-            {{paper.authors}}
-            <br/>
-            <i>{{paper.venue}}</i>
-        </li>
-        <br/>
-        {% endfor %}
-    </ul>
-
-
 </div>
