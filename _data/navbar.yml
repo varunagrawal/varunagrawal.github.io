@@ -22,6 +22,6 @@
   url: /resume/
   external: false
 
-- title: Guides
-  url: https://github.com/varunagrawal/guides
-  external: true
+# - title: Guides
+#   url: https://github.com/varunagrawal/guides
+#   external: true
