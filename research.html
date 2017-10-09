@@ -9,7 +9,7 @@ permalink: /research/
         <ul class="">
             {% for paper in site.data.publications %}
             <li>
-                <b>{{paper.title}}{% if paper.type %}, {{paper.type}}{% endif %}</b>
+                <b>{{paper.title}}{% if paper.type %}, {{paper.type}}{% endif %} {% if paper.link %}[<a href="{{paper.link}}">link</a>]{% endif %}</b>
                 <br/>
                 {{paper.authors}}
                 <br/>
