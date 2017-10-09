@@ -14,13 +14,13 @@
 #  url: /projects/
 #  external: false
 
-- title: Contact
-  url: /contact/
-  external: false
+#- title: Contact
+#  url: /contact/
+#  external: false
 
-- title: Resume
-  url: /resume/
-  external: false
+#- title: Resume
+#  url: /resume/
+#  external: false
 
 # - title: Guides
 #   url: https://github.com/varunagrawal/guides
