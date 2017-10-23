@@ -11,9 +11,14 @@ permalink: /blog/
         <br/>
 
         <p>Currently under migration. Apologies for the wait.</p>
-        {% for post in site.posts %}
-        <a href="{{post.url}}">{{ post.title }}</a>
-        {% endfor %}
+            {% for post in site.posts %}
+            
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <br/>
+                {{ post.date | date_to_string }}
+                <br/>
+                <br/>
+            {% endfor %}
     </div>
 
 </div>
