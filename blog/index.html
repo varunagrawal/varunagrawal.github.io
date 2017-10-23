@@ -7,18 +7,18 @@ permalink: /blog/
 <div class="row">
 
     <div class="col-10 col-md-8 ml-auto mr-auto">
-        <h3 class="cover-heading">Blog</h3>
-        <br/>
+        <h3 class="cover-heading">Blog Posts</h3>
 
         <p>Currently under migration. Apologies for the wait.</p>
-            {% for post in site.posts %}
-            
-                <a href="{{ post.url }}">{{ post.title }}</a>
-                <br/>
-                {{ post.date | date_to_string }}
-                <br/>
-                <br/>
-            {% endfor %}
+
+        {% for post in site.posts %}
+        
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <br/>
+            {{ post.date | date_to_string }}
+            <br/>
+            <br/>
+        {% endfor %}
     </div>
 
 </div>
