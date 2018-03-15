@@ -8,7 +8,9 @@ permalink: /blog/
 
     <div class="col-10 col-md-8 ml-auto mr-auto">
         <h3 class="cover-heading">Blog Posts</h3>
-
+        
+        <a href="/blog/tags">All tags</a>
+        
         <p>Currently under migration. Apologies for the wait.</p>
 
         {% for post in site.posts %}
@@ -16,6 +18,11 @@ permalink: /blog/
             <a href="{{ post.url }}">{{ post.title }}</a>
             <br/>
             {{ post.date | date_to_string }}
+            <br/>
+            <!-- {% for tag in post.tags %}
+                {{tag}}
+            {% endfor %} -->
+            {{ post.tags | join:' | ' }}
             <br/>
             <br/>
         {% endfor %}

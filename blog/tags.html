@@ -1,0 +1,22 @@
+---
+layout: page
+permalink: /blog/tags/
+title: Tags
+---
+
+{% for tag in site.tags %}
+    <!-- tag is a Hash, and is implemented as a 2-tuple, 
+        with the first element being the tag name and 
+        the second one being the list of posts -->
+    
+    <h5>{{tag|first}}</h5>  <!-- get the tag name -->
+    {% assign posts = tag | last %} <!-- get the posts associated with the tags -->
+
+    <ul>
+    {% for post in posts %} 
+        <li><a href="{{post.url}}">{{post.title}}</a></li>
+    {% endfor %}
+    </ul>
+
+    <br/>
+{% endfor %}
