@@ -1,5 +1,3 @@
-console.log('This would be the main JS file.');
-
 function getQuote(){
     // Quote courtesy of TheySaidSo.com "https://theysaidso.com/api/"
     console.log("Getting quote");
