@@ -4,14 +4,22 @@ title: Research
 permalink: /research/
 ---
 
-
 <div class="row">
     <h4 class="col-10 ml-auto mr-auto">Publications</h4>
+    <div class="col-10 ml-auto mr-auto">* indicates equal contribution</div>
+    <br/><br/>
+
     <div class="col-10 ml-auto mr-auto">
         <ul class="">
             {% for paper in site.data.publications %}
             <li>
-                <b>{{paper.title}}{% if paper.type %}, {{paper.type}}{% endif %} {% if paper.link %}[<a href="{{paper.link}}">link</a>]{% endif %}</b>
+                <div class="paper-title">
+                    {{paper.title}}{% if paper.type %}, {{paper.type}}{% endif %}</div>
+                    {% for link in paper.links %}
+                        {% if link %}
+                            [<a href="{{link[1]}}">{{link[0]}}</a>]
+                        {% endif %}
+                    {% endfor %}
                 <br/>
                 {{paper.authors}}
                 <br/>

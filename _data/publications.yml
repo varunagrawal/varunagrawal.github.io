@@ -1,31 +1,34 @@
 - title: "TextureGAN: Controlling Deep Image Synthesis with Texture Patches"
   authors: Wenqi Xian, Patsorn Sangkloy, Varun Agrawal, Amit Raj, Jingwan Lu, Chen Fang, Fisher Yu, James Hays
-  venue: CVPR, 2018
-  link: https://arxiv.org/abs/1706.02823
+  venue: CVPR, 2018 (Spotlight)
+  links: 
+    arXiv: https://arxiv.org/abs/1706.02823
 
 - title: Adaptive Industrial Robot Control for Designers
   authors: Shani Sharif, Varun Agrawal, Larry Sweet
   venue: 35th eCAADe Conference, September 2017
-  link: https://www.researchgate.net/publication/319944935_Adaptive_Industrial_Robot_Control_for_Designers
+  links:
+    link: https://www.researchgate.net/publication/319944935_Adaptive_Industrial_Robot_Control_for_Designers
 
 - title: Web-based Tools For Supporting Student-driven Capstone Design Team Formation
   authors: Varun Agrawal, Amit Jariwala
   venue: 124th ASEE Annual Conference and Exposition, June 2017
-  link: https://peer.asee.org/web-based-tools-for-supporting-student-driven-capstone-design-team-formation.pdf&usg=AOvVaw2u3dtb4Yzfopn_HbBf7YWI
+  links:
+    link: https://peer.asee.org/web-based-tools-for-supporting-student-driven-capstone-design-team-formation.pdf&usg=AOvVaw2u3dtb4Yzfopn_HbBf7YWI
 
 - title: OneGroup - Easy Group Photo Sharing
   authors: Varun Agrawal
   type: Poster
   venue: Microsoft Research Faculty Summit, July 2016
-  link:
+  links:
 
 - title: Real Time Edge Based Tracking for Robotics
   authors: Michael Sobrepera, Varun Agrawal, Toni Cvitanic, Larry Sweet
   type: Poster
   venue: National Network for Manufacturing Innovation Poster Session, April 2016
-  link:
+  links:
 
 - title: Indexing Music Based On Lyrical Concepts
   authors: Varun Agrawal
   venue: Microsoft Machine Learning and Data Science Conference, May 2016
-  link:
+  links:
