@@ -15,3 +15,22 @@
   crossorigin="anonymous"></script>
 
 <script src="/javascript/main.js"></script>
+
+<!-- Parse the Latex divs with Katex-->
+<script>
+$("latex").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex) +
+           "</span>";
+});
+
+$("latex-block").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString("\\displaystyle "+tex) +
+           "</div>";
+});
+</script>
