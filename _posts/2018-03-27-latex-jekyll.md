@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Latex support in Jekyll"
+title: "Latex Support in Jekyll"
 date: 2018-03-27
 # category: guide
 tags: [guide, latex]
