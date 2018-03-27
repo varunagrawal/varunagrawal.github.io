@@ -61,15 +61,13 @@ At this point, you are done with the setup and can start using Latex in your blo
 ```html
 Here, have some <latex>\pi</latex>.
 
-The greatest equation known to man is:
-<latex-block>e^{ix} = \cos{x} + i\sin{x}</latex-block>
+The greatest equation known to man is: <latex-block>e^{ix} = \cos{x} + i\sin{x}</latex-block>
 ```
 
 will render as:
 
 > Here, have some <latex>\pi</latex>.
 
-> The greatest equation known to man is:
-> <latex-block>e^{ix} = \cos{x} + i\sin{x}</latex-block>
+> The greatest equation known to man is: <latex-block>e^{ix} = \cos{x} + i\sin{x}</latex-block>
 
 At this point, you're all set and ready to roll with all the beauty of Latex typeset equations in your blog!
