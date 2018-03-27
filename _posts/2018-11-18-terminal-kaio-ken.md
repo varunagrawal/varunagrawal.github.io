@@ -3,7 +3,7 @@ layout: post
 title:  "Terminal Kaio-Ken"
 date:   2017-11-18
 # category: guide
-tags: [system]
+tags: [system, guide]
 ---
 
 In this post, I wish to elaborate on my command-line terminal setup and share what I believe is a productive, highly-utilitarian and not to mention gorgeous terminal experience. As a computer scientist/engineer, I spent more time using the terminal than a regular GUI. And if you're Unix oriented like me, you will know that using the terminal is so much more efficient and nimble than using the mouse.
