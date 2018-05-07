@@ -29,8 +29,8 @@ $("latex").replaceWith(
 $("latex-block").replaceWith(
   function(){
     var tex = $(this).text();
-    return "<div class=\"equation\">" + 
+    return "<div class=\"equation\" style=\"margin: 0 auto;width: 100px;\">" + 
            katex.renderToString("\\displaystyle "+tex) +
-           "</div>";
+           "</div></br>";
 });
 </script>
