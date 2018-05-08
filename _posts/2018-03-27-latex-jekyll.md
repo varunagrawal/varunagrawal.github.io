@@ -28,46 +28,51 @@ Setting up Katex is incredibly easy. First of all, like any good JS library, you
 
 That little snippet loads the Katex CSS and JS for you from a CDN. That's pretty much all you need in terms of setting up Katex.
 
-The next thing to figure out is how to render the latex correctly. Ideally, we want two tags `<latex>` for inline latex commands and `<latex-block>` for blocks of latex, such as big equations.
-This is also easy to configure with a little Javascript smartness. To perform the rendering by reading these blocks, we need to add the following snippet at the end of our HTML page a.k.a. the footer:
+The next thing to figure out is how to render the latex correctly. Fortunately, the `kramdown` parser that comes with Jekyll comes with `Mathjax` built-in and thus parses the page by substituting `$$...$$` latex blocks with `script[type='math/tex']` or `script[type='math/tex'; mode=display]` blocks intelligently depending on whether you used the latex block as an inline equation or as an equation block. To use the equation block, all you need to do is put the latex on a new line surrounded by `$$`s with empty lines above and below it. To enable the `kramdown` parser to parse the document correctly, you need to set the markdown parser in the `_config.yml` file to the following:
+
+```yml
+markdown: kramdown
+kramdown:
+   math_engine: mathjax
+```
+
+However, we want to use Katex and not Mathjax, so we need a way to tell Katex what blocks we wish to parse. This is also easy to configure with a little Javascript smartness. To perform the rendering by reading the substituted `script` blocks, we need to add the following snippet at the end of our HTML page a.k.a. the footer:
 
 ```html
 <!-- Parse the Latex divs with Katex-->
-<script>
-$("latex").replaceWith(
-  function(){
-    var tex = $(this).text();
-    return "<span class=\"inline-equation\">" + 
-           katex.renderToString(tex) +
-           "</span>";
-});
-
-$("latex-block").replaceWith(
-  function(){
-    var tex = $(this).text();
-    return "<div class=\"equation\">" + 
-           katex.renderToString("\\displaystyle "+tex) +
-           "</div>";
-});
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return katex.renderToString(tex, {displayMode: false});
+  });
+  
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+  });
 </script>
 ``` 
 
-What the above snippet basically says, is that when you encounter a `<latex>` tag in the document, replace it with a `<span>` tag (so that it is inline) and render the inner text correctly.
-
-Similarly for `<latex-block>`, but use a `<div>` tag instead of a `<span>` tag so that the latex renders as a block.
+What the above snippet basically says, is that when you encounter a `<script[type='math/tex]>` tag in the document, replace it with the Katex rendered string. To control whether it is inline or in a block, we set the `displayMode` option in the `renderToString` function accordingly, with `displayMode: false` being inline and `displayMode: true` being a block.
 
 At this point, you are done with the setup and can start using Latex in your blog posts. For e.g.:
 
 ```html
-Here, have some <latex>\pi</latex>.
+Here, have some $$\pi$$.
 
-The greatest equation known to man is: <latex-block>e^{ix} = \cos{x} + i\sin{x}</latex-block>
+The greatest equation known to man is: 
+
+$$e^{ix} = \cos{x} + i\sin{x}$$
 ```
 
 will render as:
 
-> Here, have some <latex>\pi</latex>.
+> Here, have some $$\pi$$.
 
-> The greatest equation known to man is: <latex-block>e^{ix} = \cos{x} + i\sin{x}</latex-block>
+> The greatest equation known to man is: 
+
+> $$e^{ix} = \cos{x} + i\sin{x}$$
 
 At this point, you're all set and ready to roll with all the beauty of Latex typeset equations in your blog!
