@@ -24,7 +24,7 @@ Given the above definitions and the location of the output <latex>y_{i,j}</latex
 
 <latex-block> x_{i,j} = \alpha*y_{i,j} + \beta + [-\frac{\Delta-1}{2}, \frac{\Delta-1}{2}] </latex-block>
 
-This equation is common to all types of filters, but the specific values of <latex>\Delta</latex>, <latex>\alpha</latex> and <latex>\beta</latex> vary by filter type.
+This equation may seem arbitrary and hard to reason about, but if you draw out a simple convolution using a 3x3 filter, you will see that this equation holds true. More importantly, this equation is common to all types of filters, but the specific values of <latex>\Delta</latex>, <latex>\alpha</latex> and <latex>\beta</latex> vary by filter type.
 
 Let's take a look at 3 of the most common filters for which receptive field computations differ.
 
