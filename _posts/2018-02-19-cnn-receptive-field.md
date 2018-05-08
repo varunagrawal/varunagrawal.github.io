@@ -146,7 +146,6 @@ Looking at the symmetry of the above equation with the equation of the single fi
 - Offset
 
 <latex-block> \beta = \beta_f + \alpha_f*\beta_g</latex-block>
-<latex-block> \implies \beta = \beta_f + \alpha_f*(\frac{k_g-1}{2} - P_g)</latex-block>
 
 - Stride
 
