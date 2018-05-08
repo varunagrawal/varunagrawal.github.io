@@ -17,20 +17,20 @@
 <script src="/javascript/main.js"></script>
 
 <!-- Parse the Latex divs with Katex-->
-<script>
-$("latex").replaceWith(
-  function(){
-    var tex = $(this).text();
-    return "<span class=\"inline-equation\">" + 
-           katex.renderToString(tex) +
-           "</span>";
-});
-
-$("latex-block").replaceWith(
-  function(){
-    var tex = $(this).text();
-    return "<div class=\"equation\" style=\"margin: 0 auto;width: 100px;\">" + 
-           katex.renderToString("\\displaystyle "+tex) +
-           "</div></br>";
-});
-</script>
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return katex.renderToString(tex, {displayMode: false});
+      // return "<span class=\"inline-equation\">" + 
+      //        katex.renderToString(tex) +
+      //        "</span>";
+  });
+  
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+  });
+  </script>
+  
