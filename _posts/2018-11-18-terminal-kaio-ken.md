@@ -12,7 +12,7 @@ To begin with, I have eschewed the standard Bash shell in favor of the much more
 
 However, ZSH on its own is not enough. To really make our experience amazing, let me introduce you to the delightful [Oh-My-ZSH](http://ohmyz.sh/), a community-driven project  which provides plugin and themes for the ZSH shell, and boy are they useful. To install ZSH, use the instructions [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) and for OMZ, all you need to do is run:
 
-```shell
+```bash
 # An easy shell script to install Oh-My-ZSH. I use the wget version since it is more ubiquitous.
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
@@ -22,57 +22,34 @@ Now time for some styling! If you are a Dragon Ball Z fan like myself and some o
 <img src="http://i0.kym-cdn.com/entries/icons/original/000/000/056/itsover1000.jpg" alt="vegeta" height="289" />
 
 The theme I most prefer is [`powerlevel9k`](https://github.com/bhilburn/powerlevel9k). Based on the `Powerline` theme, it combines functionality with a good dose of fanciness, while making a nice little reference to a beloved anime character. Installing it though is not as straightforward as the above steps have been. To install the theme,  we first have to download it and add it to the right folder:
-```shell
+
+```bash
 $ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 ```
+
 Then, we open up the `~/.zshrc` file and specify the theme
-```shell
+
+```bash
 ZSH_THEME="powerlevel9k/powerlevel9k"
 ```
+
 This uses the basic Oh-My-ZSH framework to install the theme, though you are more than welcome to use Antigen or ZPM if you are aware of them.
 
-At this point, if you open your terminal, you may find some glaring deficiencies. This is because we haven't yet set up the powerline fonts needed to render all the smooth jazz of this theme. Let's do that. First we download the latest versions of the symbol font and the fontconfig files:
+At this point, if you open your terminal, you may find some glaring deficiencies. This is because we haven't yet set up the powerline fonts needed to render all the smooth jazz of this theme. The `powerlevel9k` Wiki suggests downloading the `PowerlineSymbols` font and configuring it yourself. I have found this approach to be buggy and hard to fix on most occasions especially alongwith `FontAwesome` glyphs. Instead, the best way I have found to fix this as well as install a bunch of cool font styles and glyphs at the same time is to use `nerd-fonts`.
 
-```shell
-wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
-wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+Installing `nerd-fonts` is a piece of cake. ALl you need to do is go to the [github repository](https://github.com/ryanoasis/nerd-fonts), download the repo and unzip it somewhere convenient. Enter the unzipped directory and run the install script
+
+```bash
+./install.sh
 ```
 
-After this we need to create the font folder to store these files and create the font cache
+This will take a while since it installs all of the fonts and glyphs to your system, but it is totally worth it. However, if you wish to be bit more frugal, the README has a section on how to install specific fonts (my recommendations are `Hack` and `mononoki`). While the fonts are installing, we can go ahead and tell ZSH that we are using the `nerd-fonts` fonts by adding this line right above the `ZSH_THEME` line:
 
-```shell
-mkdir ~/.fonts
+```bash
+POWERLEVEL9K_MODE='nerdfont-complete'
 ```
 
-We can now move the font file to the above folder
-
-```shell
-mv PowerlineSymbols.otf ~/.fonts/
-```
-
-and generate the font-cache
-
-```shell
-fc-cache -vf ~/.fonts/
-```
-
-*Note* you may have to provide root privileges for the above step.
-
-Finally, install the font config file:
-
-```shell
-mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
-```
-
-Now that we have the powerline fonts set up, restart your terminal. Doesn't it look fabulous?
-
-If you want a more fully featured font set for a developer, I recommend checking out Adobe's `Source Code Pro` and the `Hack` font. To install, just copy the fonts to the `~/.fonts` directory and run `fc-cache -fv`
-
-If the theme seems a bit off, for example the arrows aren't quite aligned, this is mostly a problem with your terminal emulator. Go to the terminal emulator's preferences and select the Hack or Source Code Pro theme and it should be fixed.
-
-But wait, there's more! Since we've already made this much progress, why not go one more step ahead and add some amazing font icons from FontAwesome? This can be easily accomplished using the instructions [here](https://github.com/gabrielelana/awesome-terminal-fonts#how-to-install-linux). I am not specifying them verbatim here since the repository is still undergoing active development and the install instructions are subject to change in the near future.
-
-Your terminal should now look something like this:
+Restart your terminal and it should now look something like this:
 
 <img class="alignnone size-full wp-image-756" src="https://computercalledvarun.files.wordpress.com/2017/01/screenshot-from-2017-01-17-225604.png" alt="screenshot-from-2017-01-17-225604" width="1355" height="27" />
 
@@ -80,7 +57,7 @@ I generally dislike redundancy and useless information. Seeing my name on the pr
 
 In your `~/.zshrc`, you have to add some minor commands custom to `powerlvl9k`. These are:
 
-```shell
+```bash
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv pyenv rvm rbenv go_version nvm status history time)
 ```
