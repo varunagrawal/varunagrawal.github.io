@@ -6,9 +6,13 @@
   url: /about/
   external: false
 
-- title: Research
+- title: Publications
   url: /research/
   external: false
+
+# - title: Education
+#   url: /education/
+#   external: false
 
 # - title: Projects
 #  url: /projects/
