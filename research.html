@@ -7,7 +7,7 @@ permalink: /research/
 <div class="row">
     <h4 class="col-10 ml-auto mr-auto">Publications</h4>
     <div class="col-10 ml-auto mr-auto">* indicates equal contribution</div>
-    <br/><br/>
+    <div><br /><br /></div>
 
     <div class="col-10 ml-auto mr-auto">
         <ul class="">
@@ -15,17 +15,17 @@ permalink: /research/
             <li>
                 <div class="paper-title">
                     {{paper.title}}{% if paper.type %}, {{paper.type}}{% endif %}</div>
-                    {% for link in paper.links %}
-                        {% if link %}
-                            [<a href="{{link[1]}}">{{link[0]}}</a>]
-                        {% endif %}
-                    {% endfor %}
-                <br/>
+                {% for link in paper.links %}
+                {% if link %}
+                [<a href="{{link[1]}}">{{link[0]}}</a>]
+                {% endif %}
+                {% endfor %}
+                <br />
                 {{paper.authors}}
-                <br/>
+                <br />
                 <i>{{paper.venue}}</i>
             </li>
-            <br/>
+            <br />
             {% endfor %}
         </ul>
     </div>

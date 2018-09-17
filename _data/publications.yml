@@ -1,3 +1,9 @@
+- title: "Unbiasing Semantic Segmentation For Robot Perception using Synthetic Data Feature Transfer"
+  authors: Jonathan Balloch, Varun Agrawal, Irfan Essa, Sonia Chernova
+  venue: Technical Report
+  links: 
+    arXiv: https://arxiv.org/abs/1809.03676
+
 - title: "TextureGAN: Controlling Deep Image Synthesis with Texture Patches"
   authors: Wenqi Xian, Patsorn Sangkloy, Varun Agrawal, Amit Raj, Jingwan Lu, Chen Fang, Fisher Yu, James Hays
   venue: CVPR, 2018 (Spotlight)
