@@ -8,9 +8,9 @@ tags: [system, guide]
 
 In this post, I wish to elaborate on my command-line terminal setup and share what I believe is a productive, highly-utilitarian and not to mention gorgeous terminal experience. As a computer scientist/engineer, I spent more time using the terminal than a regular GUI. And if you're Unix oriented like me, you will know that using the terminal is so much more efficient and nimble than using the mouse.
 
-To begin with, I have eschewed the standard Bash shell in favor of the much more powerful ZSH shell. ZSH offers much more comprehensive file globbing and auto-complete features than Bash and is really nifty in how it uses its history to recall old commands you may wish to repeat. I highly recommend going through this [slide-deck](http://www.slideshare.net/jaguardesignstudio/why-zsh-is-cooler-than-your-shell-16194692) to gain an understanding of what ZSH can accomplish for you.
+To begin with, I have eschewed the standard Bash shell in favor of the much more powerful ZSH shell. ZSH offers much more comprehensive file globbing and auto-complete features than Bash and is really nifty in how it uses its history to recall old commands you may wish to repeat. I highly recommend going through this [slide-deck](https://www.slideshare.net/jaguardesignstudio/why-zsh-is-cooler-than-your-shell-16194692) to gain an understanding of what ZSH can accomplish for you.
 
-However, ZSH on its own is not enough. To really make our experience amazing, let me introduce you to the delightful [Oh-My-ZSH](http://ohmyz.sh/), a community-driven project  which provides plugin and themes for the ZSH shell, and boy are they useful. To install ZSH, use the instructions [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) and for OMZ, all you need to do is run:
+However, ZSH on its own is not enough. To really make our experience amazing, let me introduce you to the delightful [Oh-My-ZSH](https://ohmyz.sh/), a community-driven project  which provides plugin and themes for the ZSH shell, and boy are they useful. To install ZSH, use the instructions [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) and for OMZ, all you need to do is run:
 
 ```bash
 # An easy shell script to install Oh-My-ZSH. I use the wget version since it is more ubiquitous.
@@ -19,7 +19,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 Now time for some styling! If you are a Dragon Ball Z fan like myself and some of my friends, the title of this post will bring back a lot of memories, specifically, this meme -
 
-<img src="http://i0.kym-cdn.com/entries/icons/original/000/000/056/itsover1000.jpg" alt="vegeta" height="289" />
+<img src="https://i0.kym-cdn.com/entries/icons/original/000/000/056/itsover1000.jpg" alt="vegeta" height="289" />
 
 The theme I most prefer is [`powerlevel9k`](https://github.com/bhilburn/powerlevel9k). Based on the `Powerline` theme, it combines functionality with a good dose of fanciness, while making a nice little reference to a beloved anime character. Installing it though is not as straightforward as the above steps have been. To install the theme,  we first have to download it and add it to the right folder:
 

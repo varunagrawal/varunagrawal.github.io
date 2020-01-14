@@ -2,8 +2,8 @@ function getQuote(){
     // Quote courtesy of TheySaidSo.com "https://theysaidso.com/api/"
     console.log("Getting quote");
     $.ajax({
-        url: "http://quotes.rest/qod.json",
-        //url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+        url: "https://quotes.rest/qod.json",
+        //url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
         success: function(data) {
             // Data is an array of size 1, so get the first one.
             var quote = data.contents.quotes.shift();

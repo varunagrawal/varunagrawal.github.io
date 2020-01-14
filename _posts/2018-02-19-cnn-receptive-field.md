@@ -82,6 +82,10 @@ $$
 
 If you don't find yourself convinced by the above formula, you can try it out with some simple examples such as $$h=11$$, $$k_h=3$$, $$s_h=2$$ and $$P_h=1$$. You will find that $$H=6$$ and so the actual padding at the bottom needed would be $$P_w^\prime=2$$, an important distinction since we specified the padding to be 1. I would advise you draw this out in 1 dimension and verify it for yourself.
 
+Thus, the offset of filter center in this case would be
+
+$$\beta = \frac{k-1}{2} - P^\prime $$
+
 ## Convolutional Transpose
 
 The Convolutional Transpose layer (also known as deconvolution layer or fractionally-strided convolution) is the trickiest layer to understand conceptually due to the nature of its operation. The key idea to remember is that the Convolutional Transpose is just the transpose of a convolution operation and that if we look at the data dependency of this layer from output to input (i.e. backwards), it is the same as a convolutional layer. We can use this idea to derive the equations for the receptive field of this layer.
@@ -104,7 +108,17 @@ $$ \implies -\frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} \leq -y + \frac{x}{\al
 
 Multiple everything by -1 since we want to bring this inequality to an equivalent form of the original dependency equation,
 
-$$ -\frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} \leq y - \frac{x}{\alpha} - \frac{-\beta}{\alpha} \leq \frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} $$
+$$ -\frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} \leq y - \frac{x}{\alpha} - 1 + \frac{\beta}{\alpha} \leq \frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} $$
+
+$$ \implies -\frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} \leq y - \frac{x - 1 + 1}{\alpha} - 1 + \frac{\beta}{\alpha} \leq \frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} $$
+
+$$ \implies -\frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} \leq y - \frac{x - 1}{\alpha} - \frac{1}{\alpha} - 1 + \frac{\beta}{\alpha} \leq \frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} $$
+
+$$ \implies -\frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} \leq y - \frac{x - 1}{\alpha} - \frac{1}{\alpha} - \frac{\alpha}{\alpha} + \frac{\beta}{\alpha} \leq \frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} $$
+
+$$ \implies -\frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} \leq y - \frac{x - 1}{\alpha} - \frac{\alpha + 1 - \beta}{\alpha} \leq \frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} $$
+
+$$ \implies -\frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} \leq y - \frac{x - 1}{\alpha} - \frac{\alpha - \beta + 1}{\alpha} \leq \frac{\frac{\Delta-1+\alpha}{\alpha} - 1}{2} $$
 
 Thus, we get the following definitions for the convolutional transpose operation:
 
@@ -112,7 +126,7 @@ $$ \hat{\Delta} = \frac{\Delta+\alpha-1}{\alpha}$$
 
 $$ \hat{\alpha} = \frac{1}{\alpha} $$
 
-$$ \hat{\beta} = \frac{-\beta}{\alpha} $$
+$$ \hat{\beta} = \frac{\alpha - \beta + 1}{\alpha} $$
 
 We can now input the values of the convolutional layer to get the exact values for the convolutional transpose layer:
 
@@ -120,7 +134,7 @@ $$ \hat{\Delta} = \frac{k+s-1}{s} $$
 
 $$ \hat{\alpha} = \frac{1}{s} $$
 
-$$ \hat{\beta} = -\frac{\frac{k-1}{2} - P}{s} = -\frac{k-1-2P}{2s} = \frac{2P-k+1}{2s} $$
+$$ \hat{\beta} = \frac{s - (\frac{k-1}{2} - P) + 1}{s} = \frac{s + \frac{1-k}{2} + P + 1}{s} = \frac{2s + 1-k + 2P + 2}{2s} = \frac{2P-k-1 + 2s}{2s} = \frac{2P-k-1}{2s} + 1 $$
 
 ## Composing receptive fields
 

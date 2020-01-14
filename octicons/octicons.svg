@@ -1,15 +1,15 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg">
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "https://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="https://www.w3.org/2000/svg">
 <metadata>
 (c) 2012-2014 GitHub
 
 When using the GitHub logos, be sure to follow the GitHub logo guidelines (https://github.com/logos)
 
-Font License: SIL OFL 1.1 (http://scripts.sil.org/OFL)
+Font License: SIL OFL 1.1 (https://scripts.sil.org/OFL)
 Applies to all font files
 
-Code License: MIT (http://choosealicense.com/licenses/mit/)
+Code License: MIT (https://choosealicense.com/licenses/mit/)
 Applies to all other files
 </metadata>
 <defs>
