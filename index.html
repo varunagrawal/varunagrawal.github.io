@@ -87,7 +87,7 @@ title: Varun Agrawal Online
 
             <br/>
             <br/>
-            My areas of research are Computer Vision, Robotics, and Machine Learning. I am particularly interested in mobile robot autonomy and the mathematical tools and techniques to enable this.
+            My areas of research are Robotics, Computer Vision, and Machine Learning. I am particularly interested in mobile robot autonomy and the mathematical tools and techniques to enable this.
 
             <br/>
             <br/>
@@ -100,15 +100,12 @@ title: Varun Agrawal Online
     
     <div class="row">
         <div class="col col-md-8 ml-md-auto mr-md-auto">
-            <h6>Latest News</h6>
+            <h6>Latest Updates</h6>
             <div>
                 <ul>
-                    <li>Spending the summer at the Institute for Human Machine Cognition, Pensacola, working on humanoids.</li>
-                    <li>I passed my PhD Qualifying Exam. My areas were Perception and Robotics with my committe being Frank, Judy Hoffman, Seth Hutchinson, and Greg Turk.</li>
-                    <li>I am serving as a reviewer for IROS 2019.</li>
-                    <li>I am serving as a reviewer for IROS 2018.</li>
-                    <li>Our paper "TextureGAN: Controlling Deep Image Synthesis with Texture Patches" has been accepted to CVPR 2018 Spotlight!</li>
-                    <li>I am serving as a reviewer for CVPR 2018 and ICRA 2018.</li>
+                    {% for update in site.data.updates %}
+                    <li>{{update}}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
