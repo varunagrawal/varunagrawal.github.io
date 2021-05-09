@@ -1,3 +1,20 @@
+- title: "iMHS: An Incremental Multi-Hypothesis Smoother"
+  authors: Fan Jiang, Varun Agrawal, Russell Buchanan, Maurice Fallon, Frank Dellaert
+  links:
+    arxiv: https://arxiv.org/pdf/2103.13178.pdf
+  
+- title: Continuous-time State & Dynamics Estimation using a Pseudo-Spectral Parameterization
+  authors: Varun Agrawal, Frank Dellaert
+  venue: ICRA 2021
+  links:
+    arxiv: https://arxiv.org/pdf/2103.12219.pdf
+
+- title: Masked reconstruction based self-supervision for human activity recognition
+  authors: Harish Haresamudram, Apoorva Beedu, Varun Agrawal, Patrick L Grady, Irfan Essa, Judy Hoffman, Thomas Plötz
+  venue: ISWC 2020
+  links:
+    paper: https://dl.acm.org/doi/abs/10.1145/3410531.3414306
+
 - title: "Scene Perspective Framing with Visual Question Answering Dialog"
   authors: Varun Agrawal, Arda Pekis, Harish Haresamudram, Irfan Essa
   venue: CVPR 2019 Workshop on Language & Vision
