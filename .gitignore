@@ -3,3 +3,4 @@ _site
 Thumbs.db
 .DS_Store
 .idea
+.jekyll-cache
