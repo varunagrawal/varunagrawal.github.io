@@ -2,12 +2,12 @@
 #  url: /
 #  external: false
 
-- title: About
-  url: /about/
-  external: false
-
 - title: Publications
   url: /research/
+  external: false
+
+- title: About
+  url: /about/
   external: false
 
 # - title: Education
