@@ -1,0 +1,59 @@
+- title: "Proprioceptive State Estimation of Legged Robots with Kinematic Chain Modeling"
+  authors: [Varun Agrawal, Sylvain Bertrand, Robert Griffin, Frank Dellaert]
+  venue: International Conference on Humanoid Robots (Humanoids) 2022
+  links:
+    arxiv: https://arxiv.org/abs/2209.05644
+    code: https://github.com/varunagrawal/gtdyne
+
+- title: "Deep IMU Bias Inference for Robust Visual-Inertial Odometry with Factor Graphs"
+  authors: [Russell Buchanan, Varun Agrawal, Marco Camurri, Frank Dellaert, Maurice Fallon]
+  venue: Robotics and Automation Letters (RAL) 2022
+  links:
+    arxiv: https://arxiv.org/abs/2211.04517
+    code: https://github.com/ori-drs/imu_noise_learning/
+
+- title: "iMHS: An Incremental Multi-Hypothesis Smoother"
+  authors: [Fan Jiang, Varun Agrawal, Russell Buchanan, Maurice Fallon, Frank Dellaert]
+  venue: arXiv:2103.13178
+  links:
+    arxiv: https://arxiv.org/abs/2103.13178
+    code: https://github.com/borglab/imhs
+  
+- title: Continuous-time State & Dynamics Estimation using a Pseudo-Spectral Parameterization
+  authors: [Varun Agrawal, Frank Dellaert]
+  venue: International Conference on Robotics and Automation (ICRA) 2021
+  links:
+    arxiv: https://arxiv.org/abs/2103.12219
+    code: https://github.com/borglab/double-expresso
+
+- title: Masked reconstruction based self-supervision for human activity recognition
+  authors: [Harish Haresamudram, Apoorva Beedu, Varun Agrawal, Patrick L Grady, Irfan Essa, Judy Hoffman, Thomas Plötz]
+  venue: International Semantic Web Conference (ISWC) 2020
+  links:
+    paper: https://dl.acm.org/doi/abs/10.1145/3410531.3414306
+
+- title: "Unbiasing Semantic Segmentation For Robot Perception using Synthetic Data Feature Transfer"
+  authors: [Jonathan Balloch, Varun Agrawal, Irfan Essa, Sonia Chernova]
+  venue: arXiv:1809.03676
+  links: 
+    arxiv: https://arxiv.org/abs/1809.03676
+    code: https://github.com/balloch/synth-seg
+
+- title: "TextureGAN: Controlling Deep Image Synthesis with Texture Patches"
+  authors: [Wenqi Xian*, Patsorn Sangkloy*, Varun Agrawal, Amit Raj, Jingwan Lu, Chen Fang, Fisher Yu, James Hays]
+  venue: Conference on Computer Vision and Pattern Recognition (CVPR) 2018 (Spotlight)
+  links: 
+    arxiv: https://arxiv.org/abs/1706.02823
+    code: https://github.com/janesjanes/Pytorch-TextureGAN
+
+- title: Adaptive Industrial Robot Control for Designers
+  authors: [Shani Sharif, Varun Agrawal, Larry Sweet]
+  venue: 35th Education and Research in Computer Aided Architectural Design in Europe Conference (eCAADe), 2017
+  links:
+    link: https://www.researchgate.net/publication/319944935_Adaptive_Industrial_Robot_Control_for_Designers
+
+- title: Web-based Tools For Supporting Student-driven Capstone Design Team Formation
+  authors: [Varun Agrawal, Amit Jariwala]
+  venue: 124th ASEE Annual Conference and Exposition, June 2017
+  links:
+    link: https://peer.asee.org/web-based-tools-for-supporting-student-driven-capstone-design-team-formation.pdf&usg=AOvVaw2u3dtb4Yzfopn_HbBf7YWI

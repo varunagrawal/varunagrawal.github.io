@@ -10,20 +10,66 @@ permalink: /research/
     <div><br /><br /></div>
 
     <div class="col-10 ml-auto mr-auto">
-        <ul class="">
-            {% for paper in site.data.publications %}
-            <li>
-                <div class="paper-title">
-                    {{paper.title}}{% if paper.type %}, {{paper.type}}{% endif %}</div>
-                {% for link in paper.links %}
-                {% if link %}
-                [<a href="{{link[1]}}">{{link[0]}}</a>]
-                {% endif %}
+        <ul class="conference-papers">
+            {% for paper in site.data.publications.conference %}
+            <li class="paper">
+                <div class="paper-title">{{paper.title}}</div>
+                <br />
+                {% for author in paper.authors %}
+                {%- if author contains "Varun Agrawal" -%}
+                <b class="my-name">{{ author -}}</b>
+                {%- else -%}
+                {{ author -}}
+                {%- endif -%}
+                {%- unless forloop.last %}, {% endunless -%}
                 {% endfor %}
                 <br />
-                {{paper.authors}}
+                <i>{{paper.venue}}</i>
+                <br />
+                {% for link in paper.links %}
+                {% if link %}
+                <a href="{{link[1]}}"><u>{{link[0]}}</u></a>
+                {% if forloop.last == false %}
+                |
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+            </li>
+            <br />
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <h4 class="col-10 ml-auto mr-auto">Refereed Workshops</h4>
+    <div><br /><br /></div>
+
+    <div class="col-10 ml-auto mr-auto">
+        <ul class="">
+            {% for paper in site.data.publications.workshop %}
+            <li>
+                <div class="paper-title">{{paper.title}}</div>
+                <br />
+                {% for author in paper.authors %}
+                {% if author contains "Varun Agrawal" %}
+                {{- author -}}
+                {% else %}
+                {{- author -}}
+                {% endif %}
+                {%- unless forloop.last %},{% endunless -%}
+                {% endfor %}
                 <br />
                 <i>{{paper.venue}}</i>
+                <br />
+                {% for link in paper.links %}
+                {% if link %}
+                <a href="{{link[1]}}"><u>{{link[0]}}</u></a>
+                {% if forloop.last == false %}
+                |
+                {% endif %}
+                {% endif %}
+                {% endfor %}
             </li>
             <br />
             {% endfor %}
