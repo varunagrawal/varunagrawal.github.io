@@ -1,6 +1,13 @@
 // Custom SASS for Varun Agrawal's personal website
 
 .paper-title {
-    font-weight: bold;  /*Make the title text bold*/
-    display: inline; /*The title should not be a block*/
+    /*Make the title text bold*/
+    font-weight: 540;
+    /*The title should not be a block*/
+    display: inline;
+}
+
+a:link,
+a:visited {
+    color: #36013F; // Deep Purple because I love that band.
 }
