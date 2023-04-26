@@ -1,3 +1,8 @@
+- title: "Constraint Manifolds for Robotic Inference and Planning"
+  authors: [Yetong Zhang, Fan Jiang, Gerry Chen, Varun Agrawal, Adam Rutkowski, Frank Dellaert]
+  venue: International Conference on Robotics and Automation (ICRA) 2023
+  links:
+
 - title: "Proprioceptive State Estimation of Legged Robots with Kinematic Chain Modeling"
   authors: [Varun Agrawal, Sylvain Bertrand, Robert Griffin, Frank Dellaert]
   venue: International Conference on Humanoid Robots (Humanoids) 2022
@@ -50,10 +55,10 @@
   authors: [Shani Sharif, Varun Agrawal, Larry Sweet]
   venue: 35th Education and Research in Computer Aided Architectural Design in Europe Conference (eCAADe), 2017
   links:
-    link: https://www.researchgate.net/publication/319944935_Adaptive_Industrial_Robot_Control_for_Designers
+    paper: https://www.researchgate.net/publication/319944935_Adaptive_Industrial_Robot_Control_for_Designers
 
 - title: Web-based Tools For Supporting Student-driven Capstone Design Team Formation
   authors: [Varun Agrawal, Amit Jariwala]
   venue: 124th ASEE Annual Conference and Exposition, June 2017
   links:
-    link: https://peer.asee.org/web-based-tools-for-supporting-student-driven-capstone-design-team-formation.pdf&usg=AOvVaw2u3dtb4Yzfopn_HbBf7YWI
+    paper: https://peer.asee.org/web-based-tools-for-supporting-student-driven-capstone-design-team-formation.pdf&usg=AOvVaw2u3dtb4Yzfopn_HbBf7YWI
