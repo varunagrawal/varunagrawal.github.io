@@ -2,28 +2,28 @@
   authors: [Varun Agrawal, Sylvain Bertrand, Robert Griffin, Frank Dellaert]
   venue: International Conference on Humanoid Robots (Humanoids) 2022
   links:
-    arxiv: https://arxiv.org/abs/2209.05644
+    paper: https://arxiv.org/abs/2209.05644
     code: https://github.com/varunagrawal/gtdyne
 
 - title: "Deep IMU Bias Inference for Robust Visual-Inertial Odometry with Factor Graphs"
   authors: [Russell Buchanan, Varun Agrawal, Marco Camurri, Frank Dellaert, Maurice Fallon]
   venue: Robotics and Automation Letters (RAL) 2022
   links:
-    arxiv: https://arxiv.org/abs/2211.04517
+    paper: https://arxiv.org/abs/2211.04517
     code: https://github.com/ori-drs/imu_noise_learning/
 
 - title: "iMHS: An Incremental Multi-Hypothesis Smoother"
   authors: [Fan Jiang, Varun Agrawal, Russell Buchanan, Maurice Fallon, Frank Dellaert]
   venue: arXiv:2103.13178
   links:
-    arxiv: https://arxiv.org/abs/2103.13178
+    paper: https://arxiv.org/abs/2103.13178
     code: https://github.com/borglab/imhs
   
 - title: Continuous-time State & Dynamics Estimation using a Pseudo-Spectral Parameterization
   authors: [Varun Agrawal, Frank Dellaert]
   venue: International Conference on Robotics and Automation (ICRA) 2021
   links:
-    arxiv: https://arxiv.org/abs/2103.12219
+    paper: https://arxiv.org/abs/2103.12219
     code: https://github.com/borglab/double-expresso
 
 - title: Masked reconstruction based self-supervision for human activity recognition
@@ -36,14 +36,14 @@
   authors: [Jonathan Balloch, Varun Agrawal, Irfan Essa, Sonia Chernova]
   venue: arXiv:1809.03676
   links: 
-    arxiv: https://arxiv.org/abs/1809.03676
+    paper: https://arxiv.org/abs/1809.03676
     code: https://github.com/balloch/synth-seg
 
 - title: "TextureGAN: Controlling Deep Image Synthesis with Texture Patches"
   authors: [Wenqi Xian*, Patsorn Sangkloy*, Varun Agrawal, Amit Raj, Jingwan Lu, Chen Fang, Fisher Yu, James Hays]
   venue: Conference on Computer Vision and Pattern Recognition (CVPR) 2018 (Spotlight)
   links: 
-    arxiv: https://arxiv.org/abs/1706.02823
+    paper: https://arxiv.org/abs/1706.02823
     code: https://github.com/janesjanes/Pytorch-TextureGAN
 
 - title: Adaptive Industrial Robot Control for Designers

@@ -9,5 +9,17 @@
 
 a:link,
 a:visited {
-    color: #4C82FF;
+    color: #7A2021;
+}
+
+a.research:link, a.research:visited, a.research:hover {
+    text-decoration: none!important;
+    color: #e3d7d7;
+    background: #C12228;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+.venue {
+    color: #781508;
 }

@@ -24,14 +24,11 @@ permalink: /research/
                 {%- unless forloop.last %}, {% endunless -%}
                 {% endfor %}
                 <br />
-                <i>{{paper.venue}}</i>
+                <i class="venue">{{paper.venue}}</i>
                 <br />
                 {% for link in paper.links %}
                 {% if link %}
-                <a href="{{link[1]}}"><u>{{link[0]}}</u></a>
-                {% if forloop.last == false %}
-                |
-                {% endif %}
+                <a class="research" href="{{link[1]}}">{{link[0]}}</a>
                 {% endif %}
                 {% endfor %}
             </li>
@@ -60,11 +57,11 @@ permalink: /research/
                 {%- unless forloop.last %},{% endunless -%}
                 {% endfor %}
                 <br />
-                <i>{{paper.venue}}</i>
+                <i class="venue">{{paper.venue}}</i>
                 <br />
                 {% for link in paper.links %}
                 {% if link %}
-                <a href="{{link[1]}}"><u>{{link[0]}}</u></a>
+                <a class="research" href="{{link[1]}}">{{link[0]}}</a>
                 {% if forloop.last == false %}
                 |
                 {% endif %}
