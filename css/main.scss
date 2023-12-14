@@ -4,6 +4,8 @@
 
 @charset "utf-8";
 
+@use 'sass:math';
+
 // Our variables
 $base-font-family: 'Nunito', Helvetica, Arial, sans-serif;
 $base-font-size: 16px;
@@ -29,8 +31,8 @@ $on-laptop: 800px;
 // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
+//         padding-right: math.div($spacing-unit, 2);
+//         padding-left: math.div($spacing-unit, 2);
 //     }
 // }
 @mixin media-query($device) {
