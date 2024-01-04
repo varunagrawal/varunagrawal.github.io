@@ -2,7 +2,7 @@
 
 .paper-title {
     /*Make the title text bold*/
-    font-weight: 540;
+    font-weight: bolder;
     /*The title should not be a block*/
     display: inline;
 }
@@ -14,12 +14,14 @@ a:visited {
 
 a.research:link, a.research:visited, a.research:hover {
     text-decoration: none!important;
-    color: #e3d7d7;
-    background: #1c93a3;
+    color: #1c93a3;
+    background: #fdfdfd;
+    border: 1px solid #1c93a3;
     font-size: 12px;
     padding: 2px 5px;
 }
 
 .venue {
-    color: #1c93a3;
+    // color: #1c93a3;
+    color: #1c1c1d
 }
