@@ -2,6 +2,7 @@
   authors: [Yetong Zhang, Fan Jiang, Gerry Chen, Varun Agrawal, Adam Rutkowski, Frank Dellaert]
   venue: International Conference on Robotics and Automation (ICRA) 2023
   links:
+    paper: https://ieeexplore.ieee.org/document/10161024
 
 - title: "Proprioceptive State Estimation of Legged Robots with Kinematic Chain Modeling"
   authors: [Varun Agrawal, Sylvain Bertrand, Robert Griffin, Frank Dellaert]
@@ -19,7 +20,7 @@
 
 - title: "iMHS: An Incremental Multi-Hypothesis Smoother"
   authors: [Fan Jiang, Varun Agrawal, Russell Buchanan, Maurice Fallon, Frank Dellaert]
-  venue: arXiv:2103.13178
+  venue: arXiv:2103.13178, 2021
   links:
     paper: https://arxiv.org/abs/2103.13178
     code: https://github.com/borglab/imhs
@@ -39,7 +40,7 @@
 
 - title: "Unbiasing Semantic Segmentation For Robot Perception using Synthetic Data Feature Transfer"
   authors: [Jonathan Balloch, Varun Agrawal, Irfan Essa, Sonia Chernova]
-  venue: arXiv:1809.03676
+  venue: arXiv:1809.03676, 2018
   links: 
     paper: https://arxiv.org/abs/1809.03676
     code: https://github.com/balloch/synth-seg
