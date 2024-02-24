@@ -1,3 +1,8 @@
+- title: "A Group Theoretic Metric for Robot State Estimation Leveraging Chebyshev Interpolation"
+  authors: [Varun Agrawal, Frank Dellaert]
+  venue: International Conference on Robotics and Automation (ICRA) 2024
+  links:
+    paper: https://arxiv.org/abs/2401.17463
 - title: "Constraint Manifolds for Robotic Inference and Planning"
   authors: [Yetong Zhang, Fan Jiang, Gerry Chen, Varun Agrawal, Adam Rutkowski, Frank Dellaert]
   venue: International Conference on Robotics and Automation (ICRA) 2023
@@ -9,7 +14,7 @@
   venue: International Conference on Humanoid Robots (Humanoids) 2022
   links:
     paper: https://arxiv.org/abs/2209.05644
-    code: https://github.com/varunagrawal/gtdyne
+    code: https://github.com/varunagrawal/dyne
 
 - title: "Deep IMU Bias Inference for Robust Visual-Inertial Odometry with Factor Graphs"
   authors: [Russell Buchanan, Varun Agrawal, Marco Camurri, Frank Dellaert, Maurice Fallon]
@@ -20,7 +25,7 @@
 
 - title: "iMHS: An Incremental Multi-Hypothesis Smoother"
   authors: [Fan Jiang, Varun Agrawal, Russell Buchanan, Maurice Fallon, Frank Dellaert]
-  venue: arXiv:2103.13178, 2021
+  venue: arXiv
   links:
     paper: https://arxiv.org/abs/2103.13178
     code: https://github.com/borglab/imhs
