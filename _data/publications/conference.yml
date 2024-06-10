@@ -3,6 +3,13 @@
   venue: International Conference on Robotics and Automation (ICRA) 2024
   links:
     paper: https://arxiv.org/abs/2401.17463
+
+- title: "Clustering user preferences for personalized teleoperation control schemes via trajectory similarity analysis"
+  authors: [Jennifer Molnar, Varun Agrawal, Sonia Chernova]
+  venue: Frontiers in Robotics and AI (2024)
+  links:
+    paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11035831/
+
 - title: "Constraint Manifolds for Robotic Inference and Planning"
   authors: [Yetong Zhang, Fan Jiang, Gerry Chen, Varun Agrawal, Adam Rutkowski, Frank Dellaert]
   venue: International Conference on Robotics and Automation (ICRA) 2023
