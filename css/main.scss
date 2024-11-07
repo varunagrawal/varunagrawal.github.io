@@ -4,6 +4,8 @@
 
 @charset "utf-8";
 
+@use 'sass:color';
+@use 'sass:meta';
 @use 'sass:math';
 
 // Our variables
@@ -19,8 +21,8 @@ $background-color: #fdfdfd;
 $brand-color: #2a7ae2;
 
 $grey-color: #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark: darken($grey-color, 25%);
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark: color.adjust($grey-color, $lightness: -25%);
 
 // Width of the content area
 $content-width: 800px;
@@ -45,3 +47,10 @@ $on-laptop: 800px;
 @import "base",
 "syntax-highlighting",
 "custom";
+//TODO(Varun) Update to use @include instead of @import
+// @include meta.load-css("../_sass/variables");
+// @include meta.load-css("../_sass/themes");
+// @include meta.load-css("../_sass/layout");
+// @include meta.load-css("../_sass/base");
+// @include meta.load-css("../_sass/syntax-highlighting");
+// @include meta.load-css("../_sass/custom");
