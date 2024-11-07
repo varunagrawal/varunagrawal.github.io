@@ -6,4 +6,3 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem 'sassc-rails'
-gem 'jekyll-sass-converter', '~> 3.0', '>= 3.0.0'

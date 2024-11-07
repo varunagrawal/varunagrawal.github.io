@@ -168,7 +168,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
-  jekyll-sass-converter (~> 3.0, >= 3.0.0)
   sassc-rails
 
 BUNDLED WITH
