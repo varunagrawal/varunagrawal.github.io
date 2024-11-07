@@ -6,6 +6,7 @@ tags: [cpp, profiling]
 ---
 
 # C++ CPU and Heap Profiling Quickstart
+
 I've been working with C++ a lot for my PhD, and part of my work involves writing performant C++ code which can be used across various processors.
 This is particularly true in robotics, where both memory and compute can be limited resources.
 
