@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  "Quickstart on Profiling C++ programs"
+title:  "Quickstart On Profiling C++ Programs"
 date:   2024-11-06
 tags: [cpp, profiling]
 ---
-
-# C++ CPU and Heap Profiling Quickstart
 
 I've been working with C++ a lot for my PhD, and part of my work involves writing performant C++ code which can be used across various processors.
 This is particularly true in robotics, where both memory and compute can be limited resources.
@@ -24,7 +22,7 @@ We also install `graphviz` and `ghostscript` to help with report generation. Thi
 
 For Debian systems, you could also use `apt`, but I like using `brew` for various reasons, particularly cross-platform scripting.
 
-## Linking with `CMake`
+## Linking with CMake
 
 Since any non-trivial C++ program would use a build system and I prefer using `CMake`, it is imperative to show how to link Gperftools via CMake.
 
@@ -43,7 +41,7 @@ Once the system finds them, it is then just a simple matter of linking them (the
 target_link_libraries(${PROJECT_NAME} ${GPERFTOOLS_TCMALLOC} ${GPERFTOOLS_PROFILER})
 ```
 
-## `pprof` Setup
+## pprof Setup
 
 This is where I found things a bit difficult. `pprof` is now developed using `golang`, so it required me to install `Go` so I could install `pprof` with
 
