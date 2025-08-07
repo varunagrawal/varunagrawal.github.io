@@ -14,9 +14,9 @@
 #   url: /education/
 #   external: false
 
-# - title: Projects
-#  url: /projects/
-#  external: false
+- title: Fun Projects
+  url: /fun_projects/
+  external: false
 
 #- title: Contact
 #  url: /contact/
