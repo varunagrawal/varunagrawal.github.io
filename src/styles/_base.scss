@@ -118,8 +118,12 @@ a {
 
   &:hover {
     color: custom.$text-color;
-    // text-decoration: underline;
+    text-decoration: underline;
   }
+}
+
+a.nav-link {
+    text-decoration: none;
 }
 
 /**
