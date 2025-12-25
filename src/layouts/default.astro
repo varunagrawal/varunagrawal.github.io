@@ -1,0 +1,24 @@
+---
+import Head from "../components/head.astro";
+import Footer from "../components/footer.astro";
+import Navbar from "../components/navbar.astro";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <Head title={title} />
+
+  <body>
+    <div class="container">
+      <Navbar />
+
+      <br />
+
+      <slot />
+
+      <Footer />
+    </div>
+  </body>
+</html>
