@@ -1,0 +1,211 @@
+@use "sass:math";
+@use "sass:color";
+
+@use "custom";
+
+/**
+ * Reset some basic elements
+ */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styling
+ */
+body {
+  font-family: custom.$base-font-family;
+  font-size: custom.$base-font-size;
+  line-height: custom.$base-line-height;
+  font-weight: 300;
+  color: custom.$text-color;
+  background-color: custom.$background-color;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+%vertical-rhythm {
+  margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: custom.$small-font-size;
+}
+
+/**
+ * Lists
+ */
+ul,
+ol {
+  margin-left: custom.$spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+
+/**
+ * Links
+ */
+a {
+  color: custom.$brand-color;
+  text-decoration: none;
+
+  &:hover {
+    color: custom.$text-color;
+    // text-decoration: underline;
+  }
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: custom.$grey-color;
+  border-left: 4px solid custom.$grey-color-light;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid custom.$grey-color-light;
+  border-radius: 3px;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: scroll;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: -webkit-calc(#{custom.$content-width} - (#{custom.$spacing-unit} * 2));
+  max-width: calc(#{custom.$content-width} - (#{custom.$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: custom.$spacing-unit;
+  padding-left: custom.$spacing-unit;
+  @extend %clearfix;
+
+  @include custom.media-query(custom.$on-laptop) {
+    max-width: -webkit-calc(#{custom.$content-width} - (#{custom.$spacing-unit}));
+    max-width: calc(#{custom.$content-width} - (#{custom.$spacing-unit}));
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/**
+ * Icons
+ */
+.icon {
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+
+    path {
+      fill: custom.$grey-color;
+    }
+  }
+}

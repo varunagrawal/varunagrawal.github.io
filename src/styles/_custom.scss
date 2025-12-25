@@ -1,0 +1,55 @@
+// Custom SASS for Varun Agrawal's personal website
+
+@use "sass:color";
+
+/** Our variables **/
+$base-font-family: "Nunito", Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit: 30px;
+
+$text-color: #111;
+$background-color: #fdfdfd;
+$brand-color: #111;
+
+$grey-color: #828282;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark: color.adjust($grey-color, $lightness: -25%);
+
+// Width of the content area
+$content-width: 800px;
+
+$on-palm: 600px;
+$on-laptop: 800px;
+/*******************/
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+.paper-title {
+  /*Make the title text bold*/
+  font-weight: bolder;
+  /*The title should not be a block*/
+  display: inline;
+}
+
+a.research:link,
+a.research:visited,
+a.research:hover {
+  text-decoration: none !important;
+  color: #1c93a3;
+  background: #fdfdfd;
+  border: 1px solid #1c93a3;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+.venue {
+  // color: #1c93a3;
+  color: #1c1c1d;
+}
