@@ -18,4 +18,33 @@ const updates = defineCollection({
   }),
 });
 
-export const collections = { navbar, updates };
+const publications = defineCollection({
+  loader: file("src/data/research/publications.yaml"),
+  schema: z.object({
+    title: z.string(),
+    authors: z.array(z.string()),
+    venue: z.string(),
+    links: z.object({
+      paper: z.string().url(),
+    }),
+  }),
+});
+
+const workshops = defineCollection({
+  loader: file("src/data/research/workshops.yaml"),
+  schema: z.object({
+    title: z.string(),
+    authors: z.array(z.string()),
+    venue: z.string(),
+  }),
+});
+
+const talks = defineCollection({
+  loader: file("src/data/research/talks.yaml"),
+  schema: z.object({
+    title: z.string(),
+    link: z.string().url(),
+  }),
+});
+
+export const collections = { navbar, updates, publications, workshops, talks };
