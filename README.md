@@ -1,4 +1,3 @@
-varunagrawal.github.io
-======================
+# varunagrawal.github.io
 
-The Hyde version of my kick-ass Jekyll Github Page
+The launchpad for my Github Page.

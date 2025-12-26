@@ -1,0 +1,19 @@
+- id: 1
+  text: Defended my PhD dissertation on 17th September 2025.
+- id: 2
+  text: Presented a poster on RepoAuditor at US-RSE 2025, my summer project with the Georgia Tech Center for Scientific Software Engineering.
+- id: 3
+  text: Our <a href="https://arxiv.org/abs/2401.17463">paper</a> on a new state estimation metric has been accepted to ICRA 2024.
+- id: 4
+  text: 2 papers accepted to ICRA 2023!
+- id: 5
+  text: Paper on Legged Robot State Estimation accepted to Humanoids 2022.
+# - Spending summer 2021 working with Hayk Martiros and the awesome team at <a href="https://www.skydio.com/">Skydio</a> as an autonomy research intern.
+# - Our paper "Continuous-time State & Dynamics Estimation using a Pseudo-Spectral Parameterization" has been accepted to ICRA 2021.
+# - Spending the summer at the <a href="https://www.ihmc.us/">Institute for Human Machine Cognition</a>, Pensacola, working on humanoids.
+# - I passed my PhD Qualifying Exam. My areas were Perception and Robotics with my committe being Frank, Judy Hoffman, Seth Hutchinson, and Greg Turk.
+# - Serving as a reviewer for IROS 2019.
+# - Paper "Scene Perspective Framing with Visual Question Answering Dialog" accepted to CVPR Language & Vision Workshop 2019.
+# - I am serving as a reviewer for IROS 2018.
+# - Our paper "TextureGAN&#58; Controlling Deep Image Synthesis with Texture Patches" accepted to CVPR 2018.
+# - I am serving as a reviewer for CVPR 2018 and ICRA 2018.

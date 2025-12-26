@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+
+const updates = await getCollection("updates");
+---
+
+<div class="row">
+  <div class="col-7 ms-auto me-auto">
+    <h6>Latest Updates</h6>
+    <div>
+      <ul>
+        {updates.map((update) => <li set:html={update.data.text} />)}
+      </ul>
+    </div>
+  </div>
+</div>

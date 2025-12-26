@@ -1,0 +1,19 @@
+---
+import Head from "../components/head.astro";
+import Footer from "../components/footer.astro";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <Head title={title} />
+
+  <body>
+    <div class="container">
+      <slot />
+
+      <Footer />
+    </div>
+  </body>
+</html>

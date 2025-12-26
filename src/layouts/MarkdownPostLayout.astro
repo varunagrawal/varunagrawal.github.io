@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/base.astro";
+
+import Navbar from "../components/navbar.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title}>
+  <Navbar />
+  <br />
+
+  <div class="row">
+    <div class="col-9 ms-auto me-auto">
+      <meta charset="utf-8" />
+      <h1 class="post-title">{frontmatter.title}</h1>
+      <p class="post-meta text-body-secondary">
+        {
+          new Date(frontmatter.date).toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+            timeZone: "Etc/GMT",
+          })
+        }
+      </p>
+
+      <p class="post-meta text-body-secondary">{frontmatter.tags.join(", ")}</p>
+
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

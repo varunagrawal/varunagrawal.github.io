@@ -1,0 +1,27 @@
+#- id: home
+#  title: Home
+#  url: /
+#  external: false
+
+- id: research
+  title: Publications
+  url: /research/
+  external: false
+
+- id: about
+  title: About
+  url: /about/
+  external: false
+
+- id: fun_projects
+  title: Fun Projects
+  url: /fun_projects/
+  external: false
+
+#- title: Resume
+#  url: /resume/
+#  external: false
+
+# - title: Guides
+#   url: https://github.com/varunagrawal/guides
+#   external: true

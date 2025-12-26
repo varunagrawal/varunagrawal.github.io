@@ -1,0 +1,120 @@
+---
+import DefaultLayout from "../layouts/default.astro";
+
+import { getCollection } from "astro:content";
+
+const publications = await getCollection("publications");
+const workshops = await getCollection("workshops");
+const talks = await getCollection("talks");
+
+console.log(publications.at(0));
+---
+
+<DefaultLayout title="Research">
+  <div class="row">
+    <h4 class="col-9 ms-auto me-auto">Publications</h4>
+    <div class="col-9 ms-auto me-auto">* indicates equal contribution</div>
+
+    <br />
+    <br />
+
+    <div class="col-9 ms-auto me-auto">
+      <ul class="conference-papers">
+        {
+          publications.map((paper) => (
+            <li id={paper.id} class="paper">
+              <span class="paper-title">{paper.data.title}</span>
+              <br />
+
+              {paper.data.authors
+                .map((author) =>
+                  author.includes("Varun Agrawal") ? (
+                    <b class="my-name">{author}</b>
+                  ) : (
+                    <span>{author}</span>
+                  )
+                )
+                .reduce((accu, t) => {
+                  // join array with comma
+                  return accu == null ? [t] : [...accu, ", ", t];
+                }, null)}
+
+              <br />
+              <i class="venue">{paper.data.venue}</i>
+              <br />
+              {Object.entries(paper.data.links).map(([key, link]) =>
+                link != null ? (
+                  <a class="research btn btn-sm" href={link}>
+                    {key.toUpperCase()}
+                  </a>
+                ) : (
+                  ""
+                )
+              )}
+              <br />
+              <br />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <h4 class="col-9 ms-auto me-auto">Refereed Workshops</h4>
+    <br />
+    <br />
+
+    <div class="col-9 ms-auto me-auto">
+      <ul class="">
+        {
+          workshops.map((paper) => (
+            <li>
+              <div class="paper-title">{paper.data.title}</div>
+              <br />
+
+              {paper.data.authors
+                .map((author) =>
+                  author.includes("Varun Agrawal") ? (
+                    <b class="my-name">{author}</b>
+                  ) : (
+                    <span>{author}</span>
+                  )
+                )
+                .reduce((accu, t) => {
+                  // join array with comma
+                  return accu == null ? [t] : [...accu, ", ", t];
+                }, null)}
+
+              <br />
+              <i class="venue">{paper.data.venue}</i>
+              <br />
+
+              <br />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <h4 class="col-9 ms-auto me-auto">Talks</h4>
+    <br />
+    <br />
+
+    <div class="col-9 ms-auto me-auto">
+      <ul class="">
+        {
+          talks.map((talk) => (
+            <li>
+              <a class="talk-title" href={talk.data.link}>
+                {talk.data.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</DefaultLayout>
