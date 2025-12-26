@@ -48,7 +48,6 @@
   venue: Robotics and Automation Letters (RAL) 2022
   links:
     paper: https://arxiv.org/abs/2211.04517
-    code: https://github.com/ori-drs/imu_noise_learning/
 
 - id: 7
   title: "iMHS: An Incremental Multi-Hypothesis Smoother"
