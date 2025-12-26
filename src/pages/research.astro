@@ -12,13 +12,13 @@ console.log(publications.at(0));
 
 <DefaultLayout title="Research">
   <div class="row">
-    <h4 class="col-9 ms-auto me-auto">Publications</h4>
-    <div class="col-9 ms-auto me-auto">* indicates equal contribution</div>
+    <h4 class="col-8 mx-auto">Publications</h4>
+    <div class="col-8 mx-auto">* indicates equal contribution</div>
 
     <br />
     <br />
 
-    <div class="col-9 ms-auto me-auto">
+    <div class="col-8 mx-auto">
       <ul class="conference-papers">
         {
           publications.map((paper) => (
@@ -44,7 +44,11 @@ console.log(publications.at(0));
               <br />
               {Object.entries(paper.data.links).map(([key, link]) =>
                 link != null ? (
-                  <a class="research btn btn-sm" href={link}>
+                  <a
+                    class="research btn btn-sm me-2"
+                    href={link}
+                    target="_blank"
+                  >
                     {key.toUpperCase()}
                   </a>
                 ) : (
@@ -61,11 +65,11 @@ console.log(publications.at(0));
   </div>
 
   <div class="row">
-    <h4 class="col-9 ms-auto me-auto">Refereed Workshops</h4>
+    <h4 class="col-8 mx-auto">Refereed Workshops</h4>
     <br />
     <br />
 
-    <div class="col-9 ms-auto me-auto">
+    <div class="col-8 mx-auto">
       <ul class="">
         {
           workshops.map((paper) => (
@@ -99,11 +103,11 @@ console.log(publications.at(0));
   </div>
 
   <div class="row">
-    <h4 class="col-9 ms-auto me-auto">Talks</h4>
+    <h4 class="col-8 mx-auto">Talks</h4>
     <br />
     <br />
 
-    <div class="col-9 ms-auto me-auto">
+    <div class="col-8 mx-auto">
       <ul class="">
         {
           talks.map((talk) => (
