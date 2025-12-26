@@ -2,15 +2,6 @@ import { defineCollection } from "astro:content";
 import { glob, file } from "astro/loaders";
 import { z } from "astro/zod";
 
-const navbar = defineCollection({
-  loader: file("src/data/navbar.yaml"),
-  schema: z.object({
-    title: z.string(),
-    url: z.string(),
-    external: z.boolean(),
-  }),
-});
-
 const posts = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/pages/blog" }),
   schema: z.object({
@@ -35,6 +26,7 @@ const publications = defineCollection({
     venue: z.string(),
     links: z.object({
       paper: z.string().url(),
+      code: z.string().url().optional(),
     }),
   }),
 });
@@ -57,7 +49,6 @@ const talks = defineCollection({
 });
 
 export const collections = {
-  navbar,
   posts,
   updates,
   publications,
