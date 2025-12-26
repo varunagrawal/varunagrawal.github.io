@@ -11,6 +11,15 @@ const navbar = defineCollection({
   }),
 });
 
+const posts = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/pages/blog" }),
+  schema: z.object({
+    title: z.string(),
+    date: z.coerce.date(),
+    tags: z.array(z.string()),
+  }),
+});
+
 const updates = defineCollection({
   loader: file("src/data/updates.yaml"),
   schema: z.object({
@@ -47,4 +56,11 @@ const talks = defineCollection({
   }),
 });
 
-export const collections = { navbar, updates, publications, workshops, talks };
+export const collections = {
+  navbar,
+  posts,
+  updates,
+  publications,
+  workshops,
+  talks,
+};
