@@ -1,23 +1,40 @@
 ---
+// TODO: Generate a page for each tag as described in https://docs.astro.build/en/tutorial/5-astro-api/2/#advanced-javascript-generate-pages-from-existing-tags
 import DefaultLayout from "../../layouts/default.astro";
+
+// Glob all Markdown files in `blog` directory.
+const posts = Object.values(import.meta.glob("./*.md", { eager: true }));
+
+// Get the set of unique tags, sorted alphabetically.
+const tags = [
+  ...new Set(posts.map((post: any) => post.frontmatter.tags).flat()),
+].sort((a: string, b: string) => a.localeCompare(b));
 ---
 
-<DefaultLayout title="Tags" >
-{% for tag in site.tags %}
-    <!-- tag is a Hash, and is implemented as a 2-tuple, 
-        with the first element being the tag name and 
-        the second one being the list of posts -->
-    
-    <h5>{{tag|first}}</h5>  <!-- get the tag name -->
-    {% assign posts = tag | last %} <!-- get the posts associated with the tags -->
-
-    <ul>
-    {% for post in posts %} 
-        <li><a href="{{post.url}}">{{post.title}}</a></li>
-    {% endfor %}
-    </ul>
-
-    <br/>
-{% endfor %}
-
+<DefaultLayout title="Tags">
+  <div class="row">
+    <div class="col-8 ms-auto me-auto">
+      {
+        tags.map((tag: string) => {
+          const filteredPosts = posts.filter((post: any) =>
+            post.frontmatter.tags.includes(tag)
+          );
+          return (
+            <div>
+              <h5>{tag}</h5>
+              <ul>
+                {filteredPosts.map((filteredPost: any) => (
+                  <li>
+                    <a href={filteredPost.url}>
+                      {filteredPost.frontmatter.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
 </DefaultLayout>
