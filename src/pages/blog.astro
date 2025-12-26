@@ -20,16 +20,27 @@ const posts = (await getCollection("posts")).sort(
       {
         posts.map((post) => (
           <div>
-            <a href={`/blog/${post.id}`}>{post.data.title}</a>
-            <br />
-            {new Intl.DateTimeFormat("en-GB", {
-              day: "2-digit",
-              month: "short",
-              year: "numeric",
-              timeZone: "Etc/GMT", // Use GMT time since no offset is specified
-            }).format(post.data.date)}
-            <br />| {post.data.tags.join(" | ")} |
-            <br />
+            <div>
+              <a href={`/blog/${post.id}`}>{post.data.title}</a>
+            </div>
+
+            <div>
+              {new Intl.DateTimeFormat("en-GB", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+                timeZone: "Etc/GMT", // Use GMT time since no offset is specified
+              }).format(post.data.date)}
+            </div>
+
+            <div>
+              {post.data.tags.map((tag) => (
+                <button class="btn btn-sm btn-outline-dark me-1" type="button">
+                  {tag}
+                </button>
+              ))}
+            </div>
+
             <br />
           </div>
         ))
