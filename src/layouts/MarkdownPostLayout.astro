@@ -1,12 +1,12 @@
 ---
-import BasicLayout from "../layouts/basic.astro";
+import BaseLayout from "../layouts/base.astro";
 
 import Navbar from "../components/navbar.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<BasicLayout title={frontmatter.title}>
+<BaseLayout title={frontmatter.title}>
   <Navbar />
   <br />
 
@@ -30,4 +30,4 @@ const { frontmatter } = Astro.props;
       <slot />
     </div>
   </div>
-</BasicLayout>
+</BaseLayout>
