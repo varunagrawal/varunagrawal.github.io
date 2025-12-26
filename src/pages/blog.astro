@@ -1,0 +1,39 @@
+---
+import DefaultLayout from "../layouts/default.astro";
+
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<DefaultLayout title="Blog">
+  <div class="row">
+    <div class="col-10 col-md-8 ms-auto me-auto">
+      <h3 class="cover-heading">Blog Posts</h3>
+
+      <p>
+        <a href="/blog/tags">All tags</a>
+      </p>
+
+      {
+        posts.map((post) => (
+          <div>
+            <a href={`/blog/${post.id}`}>{post.data.title}</a>
+            <br />
+            {new Intl.DateTimeFormat("en-GB", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric",
+              timeZone: "Etc/GMT", // Use GMT time since no offset is specified
+            }).format(post.data.date)}
+            <br />| {post.data.tags.join(" | ")} |
+            <br />
+            <br />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</DefaultLayout>
