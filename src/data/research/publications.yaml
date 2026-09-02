@@ -1,3 +1,11 @@
+- id: 13
+  title: "Variable Elimination in Hybrid Factor Graphs for Discrete-Continuous Inference & Estimation"
+  authors: [Varun Agrawal, Frank Dellaert]
+  venue: Robotics and Automation Letters (RAL) 2026
+  links:
+    paper: https://arxiv.org/abs/2601.00545
+    code: https://github.com/varunagrawal/hybrid-factor-graph-examples
+
 - id: 12
   title: "A Group Theoretic Metric for Robot State Estimation Leveraging Chebyshev Interpolation"
   authors: [Varun Agrawal, Frank Dellaert]
